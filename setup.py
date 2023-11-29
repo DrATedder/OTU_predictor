@@ -10,6 +10,5 @@ setup(
         'pandas',
         'scikit-learn',
         'joblib',
-        'os',
     ],
 )
