@@ -116,6 +116,9 @@ created using "convert_file() and returns "presence" predictions and "certainty_
         model_path = os.path.join(os.path.dirname(__file__), 'models', 'trained_model.joblib')
 
     model = joblib.load(model_path)
+    # Specify the expected column names
+    expected_columns = ['name', 'taxID', 'taxRank', 'genomeSize', 'numReads', 'numUniqueReads',
+                        'abundance', 'genus', 'presence', 'sim_abundance']
 
 
     # Load the input file for prediction
