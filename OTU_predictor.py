@@ -31,6 +31,15 @@ slightly tweaked format to mirror the ML model training data.'''
                 line_list.append(f"{line},genus,presence,sim_abundance")
     return line_list
 
+def total_reads(cent_report):
+    total = []
+    with open(cent_report, "r") as f_in:
+        for line in f_in:
+            if not line.startswith("name"):
+                reads = line.split("\t")[4]
+                total.append(int(reads))
+    return sum(total)
+
 def convert_file(cent_report):
     '''Very basic function; creates new file with the output from "adjust_format()". '''
     with open(f"{os.path.splitext(cent_report)[0]}_data.txt", "w") as f_out:
