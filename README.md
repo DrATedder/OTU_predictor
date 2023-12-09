@@ -4,7 +4,12 @@
 
 ## Install package
 
-`OTU_predictor` is currently running on `python 3.11`. It may run on earlier python versions also, but this has not been extensively tested. The easiest way to install `OTU_predictor` is using `pip`. The following command will do this:
+`OTU_predictor` is currently running on `python 3.11`. It may run on earlier python versions also, but this has not been extensively tested. The easiest way to install `OTU_predictor` is using `pip`. Either of the following commands will do this:
+
+```bash
+pip install OTU-predictor
+```
+or
 
 ```bash
 pip install git+https://github.com/DrATedder/OTU_predictor.git
